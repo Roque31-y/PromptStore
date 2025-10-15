@@ -52,4 +52,3 @@ El sistema se desarrolla **sin frameworks**, destacando el uso de **JavaScript p
 **Universidad Politécnica de Victoria**  
 _Asignatura: Aplicaciones Web_
 
----
