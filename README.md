@@ -1,54 +1,29 @@
-# 🛍️ **PromptStore**
+# PromptStore 🛍️
 
-> _Aplicaciones Web - Proyecto Unidad 2: Sistema de Gestión de Productos y Pedidos_
+**Proyecto Unidad 2**: Sistema de Gestión de Productos y Pedidos
 
----
+## 🎯 Objetivo General
 
-## 🎯 **Objetivo General**
-Desarrollar una aplicación web que permita **registrar productos**, **gestionar un carrito de compras** y **generar pedidos**, incluyendo **métricas visuales** y **persistencia local**.
+Desarrollar una aplicación web para registrar productos, gestionar un carrito de compras y generar pedidos, incluyendo métricas visuales y persistencia local.
 
----
+## 📋 Descripción del Proyecto
 
-## 🧠 **Descripción del Proyecto**
-**PromptStore** es una aplicación web diseñada para simular una **tienda en línea interactiva**, donde los usuarios pueden:
-- 📦 Agregar, editar y eliminar productos.  
-- 🛒 Gestionar un carrito de compras dinámico.  
-- 📊 Visualizar métricas y estadísticas del sistema.  
-- 💾 Mantener los datos mediante **LocalStorage**.  
+Sistema de tienda en línea que permite gestionar productos y procesar pedidos mediante una interfaz web.
 
-El sistema se desarrolla **sin frameworks**, destacando el uso de **JavaScript puro**, con apoyo visual de **Bootstrap 5** y **SweetAlert** para una mejor experiencia de usuario.
+**🔗 Enlaces:**
+- 🎨 [Prototipo en Figma](https://www.figma.com/proto/moa7u5jhM6h0i8X43PZFVy/PromptStore)
+- 🌐 [Página del Proyecto](http://159.203.108.129/PromptStore/PromptStore/)
+- 📊 [Diagrama de Gantt](https://docs.google.com/spreadsheets/d/1nnXlapQn8YWuOMrL2hAqKLs_6iABAGEGa1c-8-NQDXA/)
+- 📱 [Maqueta Figma](https://www.figma.com/design/moa7u5jhM6h0i8X43PZFVy/PromptStore)
+- ▶️ [Canal de YouTube](https://youtube.com/@cesaryroque)
 
----
+## 🛠️ Tecnologías Utilizadas
 
-## 🧩 **Tecnologías Utilizadas**
-| Tecnología | Descripción |
-|-------------|--------------|
-| 🧱 **HTML5** | Estructura principal de la aplicación. |
-| 🎨 **CSS3** | Diseño visual y estilo. |
-| ⚙️ **JavaScript (Puro)** | Lógica y funcionalidad. |
-| 💎 **Bootstrap 5** | Componentes y diseño responsivo. |
-| 🍬 **SweetAlert** | Alertas y notificaciones modernas. |
-| 💾 **LocalStorage** | Persistencia de datos localmente. |
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) ![SweetAlert](https://img.shields.io/badge/SweetAlert-3f3f3f?style=for-the-badge&logoColor=black) ![LocalStorage](https://img.shields.io/badge/LocalStorage-3f3f3f?style=for-the-badge&logoColor=black)
 
----
+## 👥 Integrantes
 
-## 👥 **Integrantes**
-| Nombre | Rol |
-|---------|------|
-| 🧑‍💻 **Cesar Euresti** | Desarrollador Front-End |
-| 👨‍💻 **Yahir Roque** | Desarrollador Front-End |
+- César Euresti
+- Yahir Alejandro Roque Martinez
 
----
-
-## 🌐 **Enlaces Importantes**
-- 🔗 **Página del Proyecto:** [PromptStore](http://159.203.108.129/PromptStore/PromptStore/)  
-- 📅 **Diagrama de Gantt:** [Ver Diagrama](https://docs.google.com/spreadsheets/d/1nnXlapQn8YWuOMrL2hAqKLs_6iABAGEGa1c-8-NQDXA/edit?gid=1312781090#gid=1312781090) 
-- 🎨 **Maqueta Figma:** [Ver en Figma](https://www.figma.com/design/moa7u5jhM6h0i8X43PZFVy/PromptStore?node-id=0-1&t=2pxpPYLxyHyqoCg4-1)  
-- 🎥 **Canal de YouTube:** [@cesaryroque](https://youtube.com/@cesaryroque?si=vw18iPJxv5pZOx51)
-
----
-
-## 🎓 **Universidad**
-**Universidad Politécnica de Victoria**  
-_Asignatura: Aplicaciones Web_
-
+<small>**Universidad Politécnica de Victoria** - Aplicaciones Web - 2025</small>
