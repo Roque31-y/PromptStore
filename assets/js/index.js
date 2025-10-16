@@ -1,7 +1,14 @@
 // * i. Importar la base de datos
 import {bd, updateLocalStorage} from "./database.js";
 
-// * ii. Configurar eventos para el formulario de Log In
+// * ii. Mostrar modal para usuarios anónimos
+if (Number.isInteger(bd.currentUser)) {
+    showFail("Acceso denegado", "Por favor, inicie sesión...");
+    bd.currentUser = null;
+    updateLocalStorage();
+}
+
+// * iii. Configurar eventos para el formulario de Log In
 const loginForm = document.getElementById("loginForm");
 const loginUsername = document.getElementById("loginUsername");
 const loginPassword = document.getElementById("loginPassword");
@@ -40,7 +47,7 @@ loginForm.addEventListener("submit", (e) => {
     }
 });
 
-// * iii. Configurar eventos para el formulario de Registro
+// * iv. Configurar eventos para el formulario de Registro
 const registerForm = document.getElementById("registerForm");
 const registerFullName = document.getElementById("registerFullName");
 const registerUsername = document.getElementById("registerUsername");
@@ -98,7 +105,7 @@ registerForm.addEventListener("submit", (e) => {
     }
 });
 
-// * iv. Mostrar alerta de error
+// * v. Mostrar alerta de error
 function showFail(title, text) {
     Swal.fire({
         icon: "error",
@@ -109,7 +116,7 @@ function showFail(title, text) {
     });
 }
 
-// * v. Mostrar alerta de éxito y redirigir al usuario
+// * vi. Mostrar alerta de éxito y redirigir al usuario
 function redirectUser(title, text) {
     Swal.fire({
         icon: "success",
@@ -124,7 +131,7 @@ function redirectUser(title, text) {
     });
 }
 
-// * vi. Configurar el botón para mostrar/esconder la contraseña
+// * vii. Configurar el botón para mostrar/esconder la contraseña
 function addEventTogglePassword(toggleButton, passwordInput) {
     const icon = toggleButton.querySelector('i');
 
@@ -142,7 +149,7 @@ function addEventTogglePassword(toggleButton, passwordInput) {
     });
 }
 
-// * vii. Switch entre card de Log In y Registro
+// * viii. Switch entre card de Log In y Registro
 const loginCard = document.getElementById("loginCard");
 const registerCard = document.getElementById("registerCard");
 const loginToggle = document.getElementById("loginToggle");
