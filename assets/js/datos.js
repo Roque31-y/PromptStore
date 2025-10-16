@@ -17,7 +17,7 @@ for (const key in bd) {
         console.log(`Datos obtenidos: ${data}`)
         bd[key] = JSON.parse(data);
     } else {
-        // si algùm dato no existe, cargar los valores por defecto
+        // si algún dato no existe, cargar los valores por defecto
         console.log(`No existe '${key}' en localStorage, cargando datos iniciales....`);
         loadDefaults()
         updateLocalStorage()
