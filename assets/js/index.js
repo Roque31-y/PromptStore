@@ -14,7 +14,13 @@ formLogin.addEventListener("submit", (e) => {
     // guardar los valores ingresados por el usuario
     const username = inputEmail.value.trim();
     const password = inputPassword.value.trim();
-    
+
+    // validar campos vacíos
+    if (username === "" || password === "" || !username || !password) {
+        showFail("Oops!", "Por favor, llene todos los campos del formulario...")
+        return;
+    }
+
     // buscar usuario existente en la bd
     const validUser = bd.users.find(
         (u) => u.username === username && u.password === password
