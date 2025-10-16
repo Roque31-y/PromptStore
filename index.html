@@ -49,7 +49,12 @@
 
                                 <div class="mb-3">
                                     <label for="inputPassword" class="form-label">Contraseña</label>
-                                    <input type="password" placeholder="Ingresa tu contraseña..." class="form-control" id="inputPassword" required>
+                                    <div class="position-relative">
+                                        <input type="password" placeholder="Ingresa tu contraseña..." class="form-control pe-5" id="inputPassword" required>
+                                        <button type="button" id="buttonTogglePassword" class="btn p-0 border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-3" aria-label="Mostrar/Ocultar contraseña">
+                                            <i class="bi bi-eye-slash fs-5"></i>
+                                        </button>
+                                    </div>
                                 </div>
 
                                 <button id="buttonLogin" type="submit" class="btn btn-secondary w-100 mb-2">Iniciar Sesión</button>

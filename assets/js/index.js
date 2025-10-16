@@ -5,6 +5,7 @@ import {bd, updateLocalStorage} from "./datos.js";
 const formLogin = document.getElementById("formLogin");
 const inputEmail = document.getElementById("inputEmail");
 const inputPassword = document.getElementById("inputPassword");
+const buttonTogglePassword = document.getElementById("buttonTogglePassword");
 
 // * iii. Generar evento en el formulario
 formLogin.addEventListener("submit", (e) => {
@@ -42,7 +43,7 @@ function showFail(title, text) {
     });
 }
 
-// * v. Mostrar mensaje de éxito
+// * v. Mostrar alerta de éxito y redirigir al usuario
 function redirectUser(title, text) {
     Swal.fire({
         icon: "success",
@@ -57,3 +58,17 @@ function redirectUser(title, text) {
         }
     });
 }
+
+// * vi. Configurar el botón para mostrar/esconder la contraseña
+buttonTogglePassword.addEventListener('click', () => {
+    // si el input es tipo text, entonces està mostrando al contraseña
+    const isShowing = inputPassword.type === 'text';
+
+    // si se está mostrando, convierte el tipo a password
+    inputPassword.type = isShowing ? 'password' : 'text';
+
+    // modificar icono del botón de acuerdo al condicional
+    const icon = buttonTogglePassword.querySelector('i');
+    icon.classList.toggle('bi-eye', !isShowing);
+    icon.classList.toggle('bi-eye-slash', isShowing);
+});
