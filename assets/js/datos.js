@@ -5,7 +5,7 @@ export const bd = {
     sales: [],
     carts: [],
     currentUser: null
-}
+};
 
 // * ii. Obtención de datos
 for (const key in bd) {
@@ -14,13 +14,13 @@ for (const key in bd) {
 
     if (data) {
         console.log(`Cargando '${key}' desde localStorage...`);
-        console.log(`Datos obtenidos: ${data}`)
+        console.log(`Datos obtenidos: ${data}`);
         bd[key] = JSON.parse(data);
     } else {
         // si algún dato no existe, cargar los valores por defecto
         console.log(`No existe '${key}' en localStorage, cargando datos iniciales....`);
-        loadDefaults()
-        updateLocalStorage()
+        loadDefaults();
+        updateLocalStorage();
     }
 }
 
@@ -30,7 +30,7 @@ export function updateLocalStorage() {
         localStorage.setItem(key, JSON.stringify(bd[key]));
     }
     console.log("Estado guardado en localStorage.");
-    console.table(bd)
+    console.table(bd);
 }
 
 // * iv. Lista de datos iniciales
@@ -41,7 +41,7 @@ function loadDefaults() {
         fullName: "Manager P.S.",
         username: "manager",
         password: "password"
-    })
+    });
 
     // producto(s)
     bd.products.push({
@@ -51,5 +51,5 @@ function loadDefaults() {
         price: 2499.99,
         stock: 5,
         imageUrl: "https://images.unsplash.com/photo-1546868871-7041f2a55e12"
-    })
+    });
 }

@@ -1,46 +1,59 @@
-// Imposrtar la base de datos
+// * i. Importar la base de datos
 import {bd, updateLocalStorage} from "./datos.js";
 
-//Traer datos del formulario
+// * ii. Obtener elementos HTML
 const formLogin = document.getElementById("formLogin");
 const inputEmail = document.getElementById("inputEmail");
 const inputPassword = document.getElementById("inputPassword");
 
+// * iii. Generar evento en el formulario
 formLogin.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Guardar los valores del usurio
+    // guardar los valores ingresados por el usuario
     const username = inputEmail.value.trim();
     const password = inputPassword.value.trim();
     
-    // Buscar Usuario valido
-    const usuaioValido = bd.users.find(
+    // buscar usuario existente en la bd
+    const validUser = bd.users.find(
         (u) => u.username === username && u.password === password
     );
 
-    //Evaluar que el correo y la contraseña sean valido
-    if(usuaioValido){
-        bd.currentUser = usuaioValido;
-        updateLocalStorage;
+    if (validUser) {
+        // actualizar el usuario actual en la bd
+        bd.currentUser = validUser;
+        updateLocalStorage();
 
-        // Redirigir al Dashboard
-        window.location.href = "dashboard.html";
+        // redirigir al dashboard
+        redirectUser(`Bienvenido, ${validUser.fullName}!`, "Iniciando sesión automáticamente...");
     } else {
-        mostrarError("Usuario o contraseña no valido");
+        showFail("Lo sentimos!", "Usuario o contraseña no válidos...");
     }
 })
 
-// Funcion para mostrar mensaje de error
-function mostrarError(mensaje){
+// * iv. Mostrar alerta de error
+function showFail(title, text) {
+    Swal.fire({
+        icon: "error",
+        title: title,
+        text: text,
+        timer: 2000,
+        timerProgressBar: true,
+    });
+}
 
-    const alertaExistente = document.querySelector(".alert");
-    if(alertaExistente) alertaExistente.remove();
-
-    const alerta = document.createElement("div");
-    alerta.classList.add("alert", "alert-danger", "mt-3");
-
-    alerta.textContent = mensaje;
-    formLogin.appendChild(alerta);
-
-    setTimeout (() => alerta.remove(), 3000);
+// * v. Mostrar mensaje de éxito
+function redirectUser(title, text) {
+    Swal.fire({
+        icon: "success",
+        title: title,
+        text: text,
+        timer: 2000,
+        timerProgressBar: true,
+    }).then((result) => {
+        // esto redirige al usuario cuando se termine la alerta
+        if (result.dismiss) {
+            window.location.href = "dashboard.html"
+        }
+    });
 }

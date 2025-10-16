@@ -15,7 +15,7 @@ Sistema de tienda en línea que permite gestionar productos y procesar pedidos m
 - 🌐 [Página del Proyecto](http://159.203.108.129/PromptStore/PromptStore/)
 - 📊 [Diagrama de Gantt](https://docs.google.com/spreadsheets/d/1nnXlapQn8YWuOMrL2hAqKLs_6iABAGEGa1c-8-NQDXA/)
 - 📱 [Maqueta Figma](https://www.figma.com/design/moa7u5jhM6h0i8X43PZFVy/PromptStore)
-- ▶️ [Canal de YouTube](https://youtube.com/@cesaryroque)
+- ▶️ [Playlist en YouTube](https://www.youtube.com/playlist?list=PLo_14xmfHIWcbTALh0TUIHkMcRPgMIy07)
 
 ## 🛠️ Tecnologías Utilizadas
 
