@@ -37,7 +37,7 @@ export function updateLocalStorage() {
 function loadDefaults() {
     // usuario(s)
     bd.users.push({
-        id: 1,
+        id: 0,
         fullName: "Manager P.S.",
         username: "manager",
         password: "password"
@@ -45,7 +45,7 @@ function loadDefaults() {
 
     // producto(s)
     bd.products.push({
-        id: 1,
+        id: 0,
         name: "Smart Watch",
         category: "Accesorios",
         price: 2499.99,
