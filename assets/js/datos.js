@@ -40,7 +40,7 @@ function loadDefaults() {
         id: 1,
         fullName: "Manager P.S.",
         username: "manager",
-        password: "password"
+        password: "124"
     })
 
     // producto(s)
