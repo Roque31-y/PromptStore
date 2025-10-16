@@ -17,8 +17,15 @@ const loginTogglePassword = document.getElementById("loginTogglePassword");
 // evento de mostrar/esconder contraseña
 addEventTogglePassword(loginTogglePassword, loginPassword);
 
+// evento al enviar el formulario
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    // si ya hay un usuario logueado, redirigir al dashboard
+    if (bd.currentUser) {
+        redirectUser(`Bienvenido de vuelta, ${bd.currentUser.fullName}!`, "Iniciando sesión automáticamente...");
+        return;
+    }
 
     // guardar los valores ingresados por el usuario
     const username = loginUsername.value.trim();
@@ -126,7 +133,7 @@ function redirectUser(title, text) {
         timerProgressBar: true,
     }).then((result) => {
         if (result.isDismissed) {
-            window.location.href = "dashboard.html";
+            globalThis.location.href = "dashboard.html";
         }
     });
 }
