@@ -6,6 +6,7 @@ const contenedorProductos = document.getElementById('contenedorProductos');
 const inputBusqueda = document.getElementById('inputBusqueda');
 const btnAgregarProducto = document.getElementById('btnAgregarProducto');
 const btnFiltrar = document.getElementById('btnFiltrar');
+const btnCerrarSesion = document.getElementById('btnCerrarSesion');
 
 // Variable para guardar todos los productos
 let todosLosProductos = [];
@@ -297,10 +298,42 @@ function agregarNuevoProducto() {
     });
 }
 
+// Función para cerrar sesión
+function cerrarSesion() {
+    Swal.fire({
+        title: '¿Cerrar Sesión?',
+        text: '¿Estás seguro que deseas cerrar sesión?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Sí, cerrar sesión',
+        cancelButtonText: 'Cancelar'
+    }).then((resultado) => {
+        if (resultado.isConfirmed) {
+            // Borrar el usuario activo
+            bd.currentUser = null;
+            updateLocalStorage();
+            
+            Swal.fire({
+                icon: 'success',
+                title: 'Sesión cerrada',
+                text: 'Hasta pronto!',
+                timer: 1500,
+                showConfirmButton: false
+            }).then(() => {
+                // Redirigir al index después de cerrar sesión
+                window.location.href = 'index.html';
+            });
+        }
+    });
+}
+
 // Event Listeners
 inputBusqueda.addEventListener('input', buscarProductos);
 btnAgregarProducto.addEventListener('click', agregarNuevoProducto);
 btnFiltrar.addEventListener('click', filtrarProductos);
+btnCerrarSesion.addEventListener('click', cerrarSesion);
 
 // Cargar productos al iniciar
 cargarProductos();
