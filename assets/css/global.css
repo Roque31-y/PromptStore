@@ -6,3 +6,8 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.nav-pills .nav-link.active {
+    background-color: #d1d5db;
+    color: #1f2937;
+}
